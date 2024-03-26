@@ -1,15 +1,19 @@
 package rocks.zipcode.io;
 
-import java.util.Comparator;
+import java.util.*;
 
 /**
  * @author leon on 30/01/2019.
  */
 public class ItemSorter {
-    public ItemSorter(Item[] items) {
+    private Item[] itemsToSort;
+
+    public ItemSorter(Item[] itemsToSort) {
+        this.itemsToSort = itemsToSort;
     }
 
     public Item[] sort(Comparator<Item> comparator) {
-        return null;
+        Arrays.sort(this.itemsToSort, comparator);
+        return this.itemsToSort;
     }
 }
